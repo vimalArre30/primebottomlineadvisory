@@ -1,0 +1,10 @@
+/* Base reset for the Advisory site. Page styles are in advisory.css (scoped under .pba). */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#F5EFE3;color:#1A1A1A;font-family:"Mulish",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}
+ul,ol{margin:0;padding:0}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
