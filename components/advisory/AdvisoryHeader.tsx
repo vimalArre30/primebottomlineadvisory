@@ -2,7 +2,7 @@ import AdvisoryLogo from "./AdvisoryLogo";
 import { FUND_SITE } from "@/lib/advisory-config";
 // Advisory header: the sticky top bar of the site.
 export default function AdvisoryHeader({ base = "", standalone = true }: { base?: string; standalone?: boolean }) {
-  // standalone: on www.primebottomlineadvisory.com this is the top bar (no fund header above it)
+  // standalone: on www.primebottomlineadvisory.in this is the top bar (no fund header above it)
   // base="/advisory" when used on another page (e.g. /advisory/privacy) so the links go back to the page sections
   return (
     <header className="pba-header">

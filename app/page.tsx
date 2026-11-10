@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AdvisoryLanding from "@/components/advisory/AdvisoryLanding";
 import { ADVISORY_SITE } from "@/lib/advisory-config";
 
-// Home page of www.primebottomlineadvisory.com
+// Home page of www.primebottomlineadvisory.in
 const title = "Prime Bottomline Advisory — Finance for founders and established businesses";
 const description =
   "For founders: clean finance, the right business direction and a stronger position in every round. For established businesses: monthly numbers by channel and plant, compliance that never slips, and readiness for an IPO or a strategic sale.";

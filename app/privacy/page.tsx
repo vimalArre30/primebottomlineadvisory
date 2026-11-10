@@ -3,7 +3,7 @@ import AdvisoryPrivacy from "@/components/advisory/AdvisoryPrivacy";
 import { ADVISORY_SITE } from "@/lib/advisory-config";
 import "./privacy.css";
 
-// www.primebottomlineadvisory.com/privacy
+// www.primebottomlineadvisory.in/privacy
 export const metadata: Metadata = {
   metadataBase: new URL(ADVISORY_SITE),
   title: "Data privacy and cookies — Prime Bottomline Advisory",

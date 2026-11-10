@@ -12,6 +12,6 @@ export const WALKTHROUGH = {
   poster: "/media/pba-founders-poster.jpg"
 } as const;
 
-export const ADVISORY_SITE = "https://www.primebottomlineadvisory.com";
+export const ADVISORY_SITE = "https://www.primebottomlineadvisory.in";
 export const FUND_SITE = "https://www.primebottomline.vc";
 export const LINKEDIN = "https://www.linkedin.com/company/prime-bottomline-advisory";

@@ -8,7 +8,7 @@ import AdvisoryFooter from "./AdvisoryFooter";
 
 // The Advisory landing page body, used on two addresses:
 //   primebottomline.vc/advisory           → standalone=false (fund header on top)
-//   www.primebottomlineadvisory.com       → standalone=true  (own site, Advisory header on top)
+//   www.primebottomlineadvisory.in       → standalone=true  (own site, Advisory header on top)
 export default function AdvisoryLanding({ standalone = true }: { standalone?: boolean }) {
   return (
     <>

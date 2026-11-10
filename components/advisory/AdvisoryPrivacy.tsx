@@ -1,7 +1,7 @@
 import AdvisoryHeader from "./AdvisoryHeader";
 import AdvisoryFooter from "./AdvisoryFooter";
 
-// Data privacy and cookies page: www.primebottomlineadvisory.com/privacy
+// Data privacy and cookies page: www.primebottomlineadvisory.in/privacy
 // Text from the Data Privacy notice prepared by Swetha (Nov 2026).
 // The cookie section is written for what this website actually loads; update it if a new tool is added.
 const DPO = {
@@ -132,7 +132,7 @@ export default function AdvisoryPrivacy({ standalone = true }: { standalone?: bo
                 about your visit. Cookies can&apos;t read other files on your device or cookies set by other sites.
               </p>
               <p>
-                This notice covers primebottomlineadvisory.com. We keep cookies to a minimum and do not sell any
+                This notice covers primebottomlineadvisory.in. We keep cookies to a minimum and do not sell any
                 information they collect.
               </p>
 

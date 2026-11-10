@@ -4,7 +4,7 @@
 
 /* The Advisory header is the sticky top bar (--sub-h). --main-h stays 0: there is no header above it. */
 .pba{--main-h:0px;--sub-h:64px;padding-top:var(--main-h)}
-/* Own site (www.primebottomlineadvisory.com): no fund header, the Advisory header is the top bar */
+/* Own site (www.primebottomlineadvisory.in): no fund header, the Advisory header is the top bar */
 .pba.standalone{--main-h:0px}
 @media (max-width:680px){.pba{--sub-h:56px}.pba .pba-header .logo svg{height:26px}}
 

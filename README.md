@@ -1,6 +1,8 @@
 # Prime Bottomline Advisory website
 
-Live at **www.primebottomlineadvisory.com** (primebottomlineadvisory.com and the .in domains redirect there in Vercel).
+Live at **www.primebottomlineadvisory.in** (primebottomlineadvisory.in and both primebottomlineadvisory.com addresses redirect there in Vercel).
+
+A short version of the page also lives on the fund site at primebottomline.vc/advisory (Bottomline.vc repo, components/advisory/AdvisoryShort.tsx). If you change the hero or the two audience intros here, copy the change there too.
 
 Next.js 16. Two pages:
 
