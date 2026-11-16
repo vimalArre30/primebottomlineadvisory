@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
+import { track } from "@/lib/analytics";
 
 type Props = {
   items: string[];
@@ -35,6 +36,8 @@ function verdict(count: number) {
   };
 }
 
+const BAND = (n: number) => (n === 0 ? "start" : n <= 2 ? "maybe_not_yet" : n <= 4 ? "good_fit" : "strong_fit");
+
 export default function SelfCheck({ items, ctaHref, children }: Props) {
   const [ticked, setTicked] = useState<boolean[]>(() => items.map(() => false));
   const id = useId();
@@ -55,6 +58,12 @@ export default function SelfCheck({ items, ctaHref, children }: Props) {
                   checked={ticked[i]}
                   onChange={(e) => {
                     const checked = e.target.checked;
+                    const t = e.target.closest<HTMLElement>("[data-track]")?.dataset.track ?? "none";
+                    const next = count + (checked ? 1 : -1);
+                    track("selfcheck_interact", { track: t, item_index: i, checked, ticked_count: next });
+                    if (BAND(next) !== BAND(count) && next > 0) {
+                      track("selfcheck_verdict", { track: t, verdict: BAND(next), ticked_count: next });
+                    }
                     setTicked((prev) => prev.map((t, j) => (j === i ? checked : t)));
                   }}
                 />

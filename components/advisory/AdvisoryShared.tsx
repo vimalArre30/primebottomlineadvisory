@@ -3,7 +3,7 @@ import { CALENDLY, FUND_SITE } from "@/lib/advisory-config";
 export default function AdvisoryShared() {
   return (
     <div className="wrap">
-      <section className="block" id="scope">
+      <section className="block" data-section="scope" id="scope">
         <div className="block-h">
           <div>
             <div className="eyebrow">Scope</div>
@@ -34,7 +34,7 @@ export default function AdvisoryShared() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="fund-link">
         <div className="pblv">
           <div>
             <div className="eyebrow">Part of Prime Bottomline Ventures</div>
@@ -50,7 +50,7 @@ export default function AdvisoryShared() {
           </a>
         </div>
       </section>
-      <section className="block" id="book">
+      <section className="block" data-section="book" id="book">
         <div className="book">
           <h3>Schedule a call.</h3>
           <p>Pick the one that fits. Thirty minutes, no preparation needed.</p>

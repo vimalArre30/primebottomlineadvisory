@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Analytics from "@/components/Analytics";
+import AnalyticsEvents from "@/components/AnalyticsEvents";
 import { ADVISORY_SITE } from "@/lib/advisory-config";
 import "./globals.css";
 import "./montserrat.css";
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         {children}
         <Analytics />
+        <AnalyticsEvents />
       </body>
     </html>
   );

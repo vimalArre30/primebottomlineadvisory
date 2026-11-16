@@ -39,7 +39,7 @@ export default function BusinessTrack() {
           </div>
         </div>
       </div>
-      <section className="block" id="fit-business">
+      <section className="block" data-section="fit-business" id="fit-business">
         <div className="block-h">
           <div>
             <div className="eyebrow">Is this for you?</div>
@@ -72,7 +72,7 @@ export default function BusinessTrack() {
           </div>
         </SelfCheck>
       </section>
-      <section className="block">
+      <section className="block" data-section="growth-outrun">
         <div className="block-h">
           <div>
             <div className="eyebrow">Sound familiar?</div>
@@ -108,7 +108,7 @@ export default function BusinessTrack() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="gap-assessment">
         <div className="block-h">
           <div>
             <div className="eyebrow">Step one: the gap assessment</div>
@@ -182,7 +182,7 @@ export default function BusinessTrack() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="how-we-work-business">
         <div className="block-h">
           <div>
             <div className="eyebrow">How we work together</div>
@@ -220,7 +220,7 @@ export default function BusinessTrack() {
           </li>
         </ol>
       </section>
-      <section className="block">
+      <section className="block" data-section="dashboard">
         <div className="block-h">
           <div>
             <div className="eyebrow">What you get each month</div>
@@ -269,7 +269,7 @@ export default function BusinessTrack() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="roadmap-3yr">
         <div className="block-h">
           <div>
             <div className="eyebrow">The road to exit</div>
@@ -310,7 +310,7 @@ export default function BusinessTrack() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="deals-business">
         <div className="block-h">
           <div>
             <div className="eyebrow">Transactions</div>
@@ -344,7 +344,7 @@ export default function BusinessTrack() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="outcomes-business">
         <div className="block-h">
           <div>
             <div className="eyebrow">The difference</div>
@@ -371,7 +371,7 @@ export default function BusinessTrack() {
           <div className="x a">An exit-readiness score, tracked monthly, so you're ready when the offer comes.</div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="exit-path">
         <div className="eco">
           <div>
             <div className="eyebrow">Capital and exits, on your terms</div>
@@ -409,7 +409,7 @@ export default function BusinessTrack() {
           </div>
         </div>
       </section>
-      <section className="block" id="faq-business">
+      <section className="block" data-section="faq-business" id="faq-business">
         <div className="block-h">
           <div>
             <div className="eyebrow">Questions</div>
@@ -461,7 +461,7 @@ export default function BusinessTrack() {
           </details>
         </div>
       </section>
-      <section className="block" id="book-business">
+      <section className="block" data-section="book-business" id="book-business">
         <div className="cta">
           <div>
             <div className="eyebrow">Start here</div>
