@@ -23,6 +23,8 @@ function gtag(){dataLayer.push(arguments);}
 window.gtag = gtag;
 gtag('js', new Date());
 gtag('config', '${GA4_ID}');
+(window.__gaq || []).forEach(function (a) { gtag('event', a[0], a[1]); });
+window.__gaq = [];
 if (${JSON.stringify(PROD_HOSTS)}.indexOf(location.hostname) !== -1) {
   var s = document.createElement('script');
   s.async = true;

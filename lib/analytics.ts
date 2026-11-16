@@ -8,6 +8,7 @@ declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    __gaq?: [string, Record<string, unknown>][];
   }
 }
 
@@ -27,6 +28,10 @@ export function track(name: string, params: Params = {}) {
   try {
     if (typeof window.gtag === "function") {
       window.gtag("event", name, { ...clean, transport_type: "beacon" });
+    } else {
+      // gtag is defined a moment after hydration; hold early events (e.g. on page load)
+      // and let components/Analytics.tsx send them once it is ready.
+      (window.__gaq = window.__gaq || []).push([name, { ...clean, transport_type: "beacon" }]);
     }
   } catch {
     /* analytics must never break the page */
