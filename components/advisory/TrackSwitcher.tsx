@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import { track } from "@/lib/analytics";
 
 type Track = "founders" | "business";
 
@@ -61,9 +62,10 @@ export default function TrackSwitcher({ founders, business }: { founders: ReactN
   }, []);
 
   const go = useCallback(
-    (id: string, smooth: boolean) => {
+    (id: string, smooth: boolean, method = "url_hash") => {
       const t = trackFor(id);
       if (!t) return false;
+      if (t !== active) track("track_select", { track: t, from_track: active, method });
       pendingScroll.current = { id, smooth };
       setActive(t);
       // If the track is already showing, no re-render happens, so scroll now.
@@ -118,7 +120,14 @@ export default function TrackSwitcher({ founders, business }: { founders: ReactN
       const a = (e.target as Element | null)?.closest?.("a");
       const href = a?.getAttribute("href");
       if (!href || !href.startsWith("#") || href.length < 2) return;
-      if (go(decodeURIComponent(href.slice(1)), true)) e.preventDefault();
+      const method = a?.closest(".pba-header")
+        ? "header_nav"
+        : a?.closest(".hero")
+          ? "hero_door"
+          : a?.closest(".fit")
+            ? "selfcheck_link"
+            : "cross_link";
+      if (go(decodeURIComponent(href.slice(1)), true, method)) e.preventDefault();
     };
     const onHash = () => {
       const id = decodeURIComponent(window.location.hash.slice(1));
@@ -144,7 +153,7 @@ export default function TrackSwitcher({ founders, business }: { founders: ReactN
                 id={`tab-${t}`}
                 aria-controls={t}
                 aria-selected={active === t}
-                onClick={() => go(t, true)}
+                onClick={() => go(t, true, "tab")}
               >
                 {t === "founders" ? "Founders" : "Established businesses"}
               </button>

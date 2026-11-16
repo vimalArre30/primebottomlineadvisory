@@ -38,7 +38,7 @@ export default function FoundersTrack() {
           </div>
         </div>
       </div>
-      <section className="block" id="fit-founders">
+      <section className="block" data-section="fit-founders" id="fit-founders">
         <div className="block-h">
           <div>
             <div className="eyebrow">Is this for you?</div>
@@ -71,7 +71,7 @@ export default function FoundersTrack() {
           </div>
         </SelfCheck>
       </section>
-      <section className="block">
+      <section className="block" data-section="founder-month">
         <div className="block-h">
           <div>
             <div className="eyebrow">Sound familiar?</div>
@@ -105,7 +105,7 @@ export default function FoundersTrack() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="portal-video">
         <div className="block-h">
           <div>
             <div className="eyebrow">See it work</div>
@@ -118,7 +118,7 @@ export default function FoundersTrack() {
         </div>
         <WalkthroughVideo />
       </section>
-      <section className="block">
+      <section className="block" data-section="how-we-work">
         <div className="block-h">
           <div>
             <div className="eyebrow">How we work together</div>
@@ -159,7 +159,7 @@ export default function FoundersTrack() {
           </li>
         </ol>
       </section>
-      <section className="block">
+      <section className="block" data-section="plan-90">
         <div className="block-h">
           <div>
             <div className="eyebrow">Your first 90 days</div>
@@ -207,7 +207,7 @@ export default function FoundersTrack() {
           </li>
         </ol>
       </section>
-      <section className="block">
+      <section className="block" data-section="services">
         <div className="block-h">
           <div>
             <div className="eyebrow">What you get each month</div>
@@ -256,7 +256,7 @@ export default function FoundersTrack() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="deals">
         <div className="block-h">
           <div>
             <div className="eyebrow">Transactions</div>
@@ -290,7 +290,7 @@ export default function FoundersTrack() {
           </div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="outcomes">
         <div className="block-h">
           <div>
             <div className="eyebrow">The difference</div>
@@ -316,7 +316,7 @@ export default function FoundersTrack() {
           <div className="x a">Each round is discussed on clean, proven numbers, which gives you a stronger hand.</div>
         </div>
       </section>
-      <section className="block">
+      <section className="block" data-section="investor-intros">
         <div className="eco">
           <div>
             <div className="eyebrow">The network</div>
@@ -351,7 +351,7 @@ export default function FoundersTrack() {
           </div>
         </div>
       </section>
-      <section className="block" id="faq-founders">
+      <section className="block" data-section="faq-founders" id="faq-founders">
         <div className="block-h">
           <div>
             <div className="eyebrow">Questions</div>
@@ -403,7 +403,7 @@ export default function FoundersTrack() {
           </details>
         </div>
       </section>
-      <section className="block" id="book-founders">
+      <section className="block" data-section="book-founders" id="book-founders">
         <div className="cta">
           <div>
             <div className="eyebrow">Start here</div>

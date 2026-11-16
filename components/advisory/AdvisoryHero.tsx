@@ -1,6 +1,6 @@
 export default function AdvisoryHero() {
   return (
-    <section className="hero">
+    <section className="hero" data-section="hero">
       <div className="wrap">
         <div className="hero-copy">
           <div className="eyebrow">Prime Bottomline Advisory · Coimbatore · Bengaluru</div>

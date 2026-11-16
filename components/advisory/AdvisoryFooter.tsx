@@ -8,7 +8,7 @@ const LINKEDIN_ICON =
 
 export default function AdvisoryFooter(_props: { standalone?: boolean }) {
   return (
-    <footer className="pba-footer">
+    <footer className="pba-footer" data-section="footer">
       <div className="wrap">
         <div className="foot-grid">
           <div className="foot-col">

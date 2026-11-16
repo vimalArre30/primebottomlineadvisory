@@ -1,41 +1,35 @@
 import Script from "next/script";
 
 /**
- * Site-wide Meta Pixel + GA4.
+ * Site-wide GA4 + Meta Pixel.
  *
- * IDs come from environment variables so no code change is needed when they
- * arrive — set these in Vercel (Project → Settings → Environment Variables)
- * and redeploy:
+ * GA4: the Measurement ID is hardcoded below (property "Prime Bottomline Advisory").
+ * The gtag.js file is only downloaded on the real domains, so localhost and Vercel
+ * preview deployments never send data to the property. gtag() itself is always defined,
+ * so events can still be inspected in window.dataLayer while developing.
  *
- *   NEXT_PUBLIC_META_PIXEL_ID  e.g. 123456789012345
- *   NEXT_PUBLIC_GA4_ID         e.g. G-XXXXXXXXXX
- *
- * While unset, this component renders nothing.
- *
- * Note: the three /academy pages are static HTML and load their own SDKs —
- * fill the same two IDs in the constants at the top of each file in
- * public/academy/ (search TODO:PIXEL / TODO:GA4).
+ * Meta Pixel: set NEXT_PUBLIC_META_PIXEL_ID in Vercel and redeploy. While unset, it renders nothing.
  */
-const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
+export const GA4_ID = "G-ZMYFXK8PT6";
+const PROD_HOSTS = ["www.primebottomlineadvisory.in", "primebottomlineadvisory.in"];
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
 export default function Analytics() {
   return (
     <>
-      {GA4_ID ? (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga4-init" strategy="afterInteractive">
-            {`window.dataLayer = window.dataLayer || [];
+      <Script id="ga4-init" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
 gtag('js', new Date());
-gtag('config', '${GA4_ID}');`}
-          </Script>
-        </>
-      ) : null}
+gtag('config', '${GA4_ID}');
+if (${JSON.stringify(PROD_HOSTS)}.indexOf(location.hostname) !== -1) {
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA4_ID}';
+  document.head.appendChild(s);
+}`}
+      </Script>
       {META_PIXEL_ID ? (
         <Script id="meta-pixel" strategy="afterInteractive">
           {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
